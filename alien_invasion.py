@@ -36,6 +36,8 @@ class AlienInvasion:
                     self.ship.moving_right = True
                 if event.key == pygame.K_LEFT:
                     self.ship.moving_left = True
+                if event.key == pygame.K_SPACE:
+                    self.ship.fire_bullet()
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_RIGHT:
                     self.ship.moving_right = False
@@ -45,8 +47,8 @@ class AlienInvasion:
     
     def _update_screen(self):
         self.screen.fill(self.settings.bg_color)
-        self.ship.move()
-        self.ship.blitme()
+        self.ship.update()
+        self.ship.draw()
         pygame.display.flip()
         
     def run_game(self):
