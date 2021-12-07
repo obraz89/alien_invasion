@@ -52,7 +52,7 @@ class Ship:
     
     def update(self):
         self.move()
-        for bullet in self.bullets: 
+        for bullet in self.bullets.copy(): 
             if bullet.y < 0:
                 self.bullets.remove(bullet)
             else:
