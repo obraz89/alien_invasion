@@ -1,2 +1,5 @@
 #install pygame module
 python -m pip --user pygame
+
+# with anaconda: open conda navigation->environments->base (root) or other-> open terminal
+pip install pygame
